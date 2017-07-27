@@ -1,0 +1,45 @@
+<html>
+
+{% load static %}
+
+
+
+
+<head>
+<link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+    {% block head %}
+    <title>Login Page</title>
+    {% endblock %}
+</head>
+
+<body>
+<a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
+
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    	  <div class="modal-dialog">
+				<div class="loginmodal-container">
+					<h1>Login to Your Account</h1><br>
+				  <form>
+					<input type="text" name="user" placeholder="Username">
+					<input type="password" name="pass" placeholder="Password">
+					<input type="submit" name="login" class="login loginmodal-submit" value="Login">
+				  </form>
+
+				  <div class="login-help">
+					<a href="#">Register</a> - <a href="#">Forgot Password</a>
+				  </div>
+				</div>
+			</div>
+		  </div>
+
+</body>
+<div class="container" id="wrap">
+	  <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form action="r" method="post" accept-charset="utf-8" class="form" role="form">   <a href="login/register">Sign Up</a>
+            </form>
+
+
+{% block body %}
+{% endblock %}
+</html>
